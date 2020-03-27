@@ -1,0 +1,31 @@
+{
+  "name": "bumplan",
+  "version": "1.0.0",
+  "description": "A simple program to find seating plan on an airplane.",
+  "main": "index.js",
+  "repository": "https://github.com/paambaati/bumplan",
+  "author": "GP <me@httgp.com>",
+  "license": "WTFPL",
+  "private": true,
+  "scripts": {
+    "start": "run(){ node index.js \"$1\" \"$2\"; }; run",
+    "build": "tsc",
+    "debug": "run(){ ts-node -T index.ts \"$1\" \"$2\"; }; run",
+    "test": "NO_COLOR=1 tape -r ts-node/register/transpile-only index.test.ts",
+    "coverage": "rm -rf ./node_modules/.cache && rm -rf coverage/ && rm -rf .nyc_output/ && NO_COLOR=1 nyc tape -r ts-node/register/transpile-only index.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.31",
+    "@types/tape": "4.2.34",
+    "@types/test-console": "1.1.0",
+    "nyc": "15.0.0",
+    "tape": "4.13.2",
+    "test-console": "1.1.0",
+    "to-readable-stream": "2.1.0",
+    "ts-node": "8.8.1",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "colorette": "1.1.0"
+  }
+}
